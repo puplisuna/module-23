@@ -1,21 +1,22 @@
-class parrot:
-    species = "bird"
+class CSStudent:
+    stream = 'cse'
+    def __init__(self, roll):
+        self.roll = roll
+    
+    def setaddress(self, address):
+        self.address = address
 
-    # Constructor to initialize name and age
-    def __init__(self, name, age):
-        self.name = name
-        self.age = age
-
-    def sing(self, song):
-        return "{} sings {}".format(self.name, song)
-
-    def dance(self, dance):
-        return "{} dances {}".format(self.name, dance)
+    def getaddress(self):
+        return self.address
 
 # Create instances and call methods outside the class
-blu = parrot("Blu", 10)
-print(blu.sing("Happy Birthday")) 
-print(blu.dance("Salsa"))
-woo = parrot("Woo", 5)
-print(woo.sing("Twinkle Twinkle Little Star"))
-print(woo.dance("Ballet"))
+add = CSStudent(101)
+add.setaddress('123 Main St')
+print(add.getaddress())  # Output: 123 Main St
+
+a = CSStudent(101)
+b = CSStudent(102)
+print(a.stream)  # Output: cse
+print(b.stream)  # Output: cse
+print(a.roll)    # Output: 101
+print(CSStudent.stream)
